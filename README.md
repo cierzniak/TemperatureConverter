@@ -13,10 +13,10 @@ php bin/console app:converter {value} {unit}
 Example output:
 
 ```
-Temperature 0K is:
-* -273.15C
-* -459.67F
-* 0K
+Temperatura -100C w innych jednostkach ma wartość:
+* -100C
+* -148F
+* 173.15K
 ```
 
 #### API
