@@ -5,3 +5,9 @@
 
 # PHP-CS-Fixer related
 /.php_cs.cache
+
+###> symfony/framework-bundle ###
+.env
+/public/bundles/
+/var/
+###< symfony/framework-bundle ###
