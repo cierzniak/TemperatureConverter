@@ -2,6 +2,7 @@
 
 namespace Tests\Converter;
 
+use Converter\Exception\UnsupportedTemperatureUnitException;
 use Converter\Model\Temperature;
 use Converter\Model\TemperatureUnit;
 use Converter\Service\TemperatureConverter;
@@ -50,5 +51,17 @@ class ConverterTest extends TestCase
             '30F to K' => [30, 'F', 'K', 272.0388888888889],
             '30F to C' => [30, 'F', 'C', -1.1111111111110858],
         ];
+    }
+
+    /**
+     * @test
+     */
+    public function throws_unsupported_unit_exception_if_converting_from_unsupported_unit(): void
+    {
+        $converter = new TemperatureConverter();
+
+        $this->expectException(UnsupportedTemperatureUnitException::class);
+
+        $converter->convert(new Temperature(36.6, new TemperatureUnit('X')), new TemperatureUnit('C'));
     }
 }
