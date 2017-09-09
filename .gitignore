@@ -2,3 +2,6 @@
 /composer.phar
 /vendor/*
 !/vendor/.gitkeep
+
+# PHP-CS-Fixer related
+/.php_cs.cache
