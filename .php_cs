@@ -54,7 +54,7 @@ return PhpCsFixer\Config::create()
             'space' => 'single',
         ],
         'declare_strict_types' => false,
-        'dir_constant' => true,
+        'dir_constant' => false,
         'doctrine_annotation_array_assignment' => [
             'ignored_tags' => [
                 'abstract',
@@ -438,19 +438,12 @@ return PhpCsFixer\Config::create()
         ],
         'elseif' => true,
         'encoding' => true,
-        'ereg_to_preg' => true,
+        'ereg_to_preg' => false,
         'full_opening_tag' => true,
         'function_declaration' => [
             'closure_function_spacing' => 'one',
         ],
-        'function_to_constant' => [
-            'functions' => [
-                'get_class',
-                'php_sapi_name',
-                'phpversion',
-                'pi',
-            ],
-        ],
+        'function_to_constant' => false,
         'function_typehint_space' => true,
         'general_phpdoc_annotation_remove' => [
             'annotations' => [],
@@ -464,9 +457,7 @@ return PhpCsFixer\Config::create()
         'heredoc_to_nowdoc' => false,
         'include' => true,
         'indentation_type' => true,
-        'is_null' => [
-            'use_yoda_style' => true,
-        ],
+        'is_null' => false,
         'line_ending' => true,
         'linebreak_after_opening_tag' => true,
         'list_syntax' => [
@@ -577,14 +568,7 @@ return PhpCsFixer\Config::create()
             'importsOrder' => null,
             'sortAlgorithm' => 'alpha',
         ],
-        'php_unit_construct' => [
-            'assertions' => [
-                'assertEquals',
-                'assertSame',
-                'assertNotEquals',
-                'assertNotSame',
-            ],
-        ],
+        'php_unit_construct' => false,
         'php_unit_dedicate_assert' => [
             'functions' => [
                 'array_key_exists',
@@ -611,14 +595,7 @@ return PhpCsFixer\Config::create()
             ],
         ],
         'php_unit_fqcn_annotation' => true,
-        'php_unit_strict' => [
-            'assertions' => [
-                'assertAttributeEquals',
-                'assertAttributeNotEquals',
-                'assertEquals',
-                'assertNotEquals',
-            ],
-        ],
+        'php_unit_strict' => false,
         'php_unit_test_class_requires_covers' => false,
         'phpdoc_add_missing_param_annotation' => [
             'only_untyped' => false,
