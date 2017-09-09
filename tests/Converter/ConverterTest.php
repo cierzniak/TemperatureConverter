@@ -64,4 +64,16 @@ class ConverterTest extends TestCase
 
         $converter->convert(new Temperature(36.6, new TemperatureUnit('X')), new TemperatureUnit('C'));
     }
+
+    /**
+     * @test
+     */
+    public function throws_unsupported_unit_exception_if_converting_to_unsupported_unit(): void
+    {
+        $converter = new TemperatureConverter();
+
+        $this->expectException(UnsupportedTemperatureUnitException::class);
+
+        $converter->convert(new Temperature(36.6, new TemperatureUnit('C')), new TemperatureUnit('X'));
+    }
 }
