@@ -11,7 +11,7 @@
         <ini name="error_reporting" value="-1" />
     </php>
     <testsuites>
-        <testsuite name="App">
+        <testsuite name="App\Tests\">
             <directory suffix="Test.php">tests</directory>
         </testsuite>
     </testsuites>

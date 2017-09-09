@@ -1,12 +1,12 @@
 <?php
 
-namespace Tests\Converter\Service;
+namespace App\Tests\Converter\Service;
 
-use Converter\Exception\TemperatureBelowAbsoluteZeroException;
-use Converter\Exception\UnsupportedTemperatureUnitException;
-use Converter\Model\Temperature;
-use Converter\Model\TemperatureUnit;
-use Converter\Service\TemperatureConverter;
+use App\Converter\Exception\TemperatureBelowAbsoluteZeroException;
+use App\Converter\Exception\UnsupportedTemperatureUnitException;
+use App\Converter\Model\Temperature;
+use App\Converter\Model\TemperatureUnit;
+use App\Converter\Service\TemperatureConverter;
 use PHPUnit\Framework\TestCase;
 
 class TemperatureConverterTest extends TestCase
@@ -77,6 +77,7 @@ class TemperatureConverterTest extends TestCase
 
         $converter->convert(new Temperature(36.6, new TemperatureUnit('C')), new TemperatureUnit('X'));
     }
+
     /**
      * @test
      */

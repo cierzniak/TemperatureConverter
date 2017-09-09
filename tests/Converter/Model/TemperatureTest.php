@@ -1,10 +1,10 @@
 <?php
 
-namespace Tests\Converter\Model;
+namespace App\Tests\Converter\Model;
 
-use Converter\Exception\TemperatureBelowAbsoluteZeroException;
-use Converter\Model\Temperature;
-use Converter\Model\TemperatureUnit;
+use App\Converter\Exception\TemperatureBelowAbsoluteZeroException;
+use App\Converter\Model\Temperature;
+use App\Converter\Model\TemperatureUnit;
 use PHPUnit\Framework\TestCase;
 
 class TemperatureTest extends TestCase

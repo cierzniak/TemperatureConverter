@@ -1,8 +1,8 @@
 <?php
 
-namespace Converter\Model;
+namespace App\Converter\Model;
 
-use Converter\Exception\TemperatureBelowAbsoluteZeroException;
+use App\Converter\Exception\TemperatureBelowAbsoluteZeroException;
 
 class Temperature
 {

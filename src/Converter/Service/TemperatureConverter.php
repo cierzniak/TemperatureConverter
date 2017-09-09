@@ -1,9 +1,9 @@
 <?php
 
-namespace Converter\Service;
+namespace App\Converter\Service;
 
-use Converter\Model\Temperature;
-use Converter\Model\TemperatureUnit;
+use App\Converter\Model\Temperature;
+use App\Converter\Model\TemperatureUnit;
 
 class TemperatureConverter
 {

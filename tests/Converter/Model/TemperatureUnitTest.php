@@ -1,9 +1,9 @@
 <?php
 
-namespace Tests\Converter\Model;
+namespace App\Tests\Converter\Model;
 
-use Converter\Exception\UnsupportedTemperatureUnitException;
-use Converter\Model\TemperatureUnit;
+use App\Converter\Exception\UnsupportedTemperatureUnitException;
+use App\Converter\Model\TemperatureUnit;
 use PHPUnit\Framework\TestCase;
 
 class TemperatureUnitTest extends TestCase

@@ -1,6 +1,6 @@
 <?php
 
-namespace Converter\Exception;
+namespace App\Converter\Exception;
 
 class UnsupportedTemperatureUnitException extends \Exception
 {

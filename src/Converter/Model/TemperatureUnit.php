@@ -1,8 +1,8 @@
 <?php
 
-namespace Converter\Model;
+namespace App\Converter\Model;
 
-use Converter\Exception\UnsupportedTemperatureUnitException;
+use App\Converter\Exception\UnsupportedTemperatureUnitException;
 
 class TemperatureUnit
 {
