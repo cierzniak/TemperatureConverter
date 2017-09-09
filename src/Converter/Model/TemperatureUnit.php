@@ -12,10 +12,10 @@ class TemperatureUnit
 
     public function __construct(string $unit)
     {
-        if (!$this->isSupportedUnit($unit)) {
+        $this->unit = strtoupper($unit);
+        if (!$this->isSupportedUnit()) {
             throw new UnsupportedTemperatureUnitException();
         }
-        $this->unit = $unit;
     }
 
     public function unit(): string
@@ -28,8 +28,8 @@ class TemperatureUnit
         return $this->unit() === $other->unit();
     }
 
-    private function isSupportedUnit(string $scale): bool
+    private function isSupportedUnit(): bool
     {
-        return \in_array(\strtoupper($scale), self::SUPPORTED_UNITS);
+        return in_array($this->unit(), self::SUPPORTED_UNITS);
     }
 }
