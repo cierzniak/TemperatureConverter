@@ -1,0 +1,4 @@
+# Composer related
+/composer.phar
+/vendor/*
+!/vendor/.gitkeep
