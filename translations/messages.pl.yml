@@ -1,0 +1,2 @@
+command:
+  converter: 'Temperatura %value%%unit% w innych jednostkach ma wartość:'

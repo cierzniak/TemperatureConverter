@@ -2,6 +2,46 @@
 
 Recruitment task from [phorzycki/recruitment](https://github.com/phorzycki/recruitment).
 
+### Converting temperatures
+#### Console
+You can convert temperatures using CLI interface via console command:
+
+```bash
+php bin/console app:converter {value} {unit}
+```
+
+Example output:
+
+```
+Temperature 0K is:
+* -273.15C
+* -459.67F
+* 0K
+```
+
+#### API
+You can convert temperatures using API interface via address:
+```
+http(s)://{host}/api/v1/converter/{value}/{unit}
+```
+
+Example output:
+
+```
+{
+    "data": {
+        "entered": {
+            "C": 36.6
+        },
+        "converted": {
+            "C": 36.6,
+            "F": 97.88000000000005,
+            "K": 309.75
+        }
+    }
+}
+```
+
 ### Development
 
 #### Formatting code
