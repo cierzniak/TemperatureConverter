@@ -9,15 +9,11 @@
          bootstrap="vendor/autoload.php">
     <php>
         <ini name="error_reporting" value="-1" />
+        <server name="KERNEL_CLASS" value="App\Kernel" />
     </php>
     <testsuites>
         <testsuite name="App\Tests\">
             <directory suffix="Test.php">tests</directory>
         </testsuite>
     </testsuites>
-    <filter>
-        <whitelist>
-            <directory suffix=".php">src</directory>
-        </whitelist>
-    </filter>
 </phpunit>

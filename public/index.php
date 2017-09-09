@@ -7,17 +7,11 @@ use Symfony\Component\HttpFoundation\Request;
 
 require __DIR__.'/../vendor/autoload.php';
 
-// The check is to ensure we don't use .env in production
 if (!isset($_SERVER['APP_ENV'])) {
     (new Dotenv())->load(__DIR__.'/../.env');
 }
 
 if ($_SERVER['APP_DEBUG'] ?? false) {
-    // WARNING: You should setup permissions the proper way!
-    // REMOVE the following PHP line and read
-    // https://symfony.com/doc/current/book/installation.html#checking-symfony-application-configuration-and-setup
-    umask(0000);
-
     Debug::enable();
 }
 

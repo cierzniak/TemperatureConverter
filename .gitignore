@@ -1,8 +1,3 @@
-# Composer related
-/composer.phar
-/vendor/*
-!/vendor/.gitkeep
-
 # PHP-CS-Fixer related
 /.php_cs.cache
 
@@ -10,4 +5,8 @@
 .env
 /public/bundles/
 /var/
+/vendor/
 ###< symfony/framework-bundle ###
+###> symfony/web-server-bundle ###
+.web-server-pid
+###< symfony/web-server-bundle ###
