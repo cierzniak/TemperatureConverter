@@ -1,5 +1,14 @@
-index:
-  path: /
+front_index:
+  path: '/'
   methods: ['GET']
   defaults:
     _controller: 'App\Controller\DefaultController::index'
+
+api_converter:
+  path: 'api/v1/converter/{unit}/{value}'
+  methods: ['GET']
+  defaults:
+    _controller: 'App\Controller\ApiController::converter'
+  requirements:
+    unit: '^[a-zA-Z]+$'
+    value: '^[+-]?([0-9]*[.])?[0-9]+$'

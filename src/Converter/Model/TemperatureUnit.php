@@ -6,7 +6,7 @@ use App\Converter\Exception\UnsupportedTemperatureUnitException;
 
 class TemperatureUnit
 {
-    private const SUPPORTED_UNITS = ['C', 'F', 'K'];
+    public const SUPPORTED_UNITS = ['C', 'F', 'K'];
 
     private $unit;
 

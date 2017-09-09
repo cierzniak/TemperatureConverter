@@ -6,10 +6,13 @@ use App\Converter\Exception\TemperatureBelowAbsoluteZeroException;
 
 class Temperature
 {
+    public const KELVIN_TO_CELSIUS_CONST = 273.15;
+    public const KELVIN_TO_FAHRENHEIT_CONST = 459.67;
+    public const KELVIN_TO_FAHRENHEIT_RATE = 9 / 5;
     private const ABSOLUTE_ZERO_TEMPERATURE = [
         'K' => 0,
-        'C' => -273.15,
-        'F' => -459.67,
+        'C' => -1 * self::KELVIN_TO_CELSIUS_CONST,
+        'F' => -1 * self::KELVIN_TO_FAHRENHEIT_CONST,
     ];
 
     private $value;

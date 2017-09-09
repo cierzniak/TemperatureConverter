@@ -26,8 +26,8 @@ class TemperatureConverter
     private function calculateToKelvin(TemperatureUnit $fromUnit, float $value)
     {
         $rates = [
-            'C' => $value + 273.15,
-            'F' => ($value + 459.67) * 5 / 9,
+            'C' => $value + Temperature::KELVIN_TO_CELSIUS_CONST,
+            'F' => ($value + Temperature::KELVIN_TO_FAHRENHEIT_CONST) / Temperature::KELVIN_TO_FAHRENHEIT_RATE,
         ];
 
         return $rates[$fromUnit->unit()];
@@ -36,8 +36,8 @@ class TemperatureConverter
     private function calculateFromKelvin(TemperatureUnit $toUnit, float $value)
     {
         $rates = [
-            'C' => $value - 273.15,
-            'F' => $value * 9 / 5 - 459.67,
+            'C' => $value - Temperature::KELVIN_TO_CELSIUS_CONST,
+            'F' => $value * Temperature::KELVIN_TO_FAHRENHEIT_RATE - Temperature::KELVIN_TO_FAHRENHEIT_CONST,
         ];
 
         return $rates[$toUnit->unit()];
