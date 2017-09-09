@@ -15,4 +15,9 @@ class TemperatureUnit
     {
         return $this->unit;
     }
+
+    public function isSameUnit(self $other): bool
+    {
+        return $this->unit() === $other->unit();
+    }
 }
