@@ -6,7 +6,6 @@ use App\Converter\Model\Temperature;
 use App\Converter\Model\TemperatureUnit;
 use App\Converter\Service\TemperatureConverter;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 
 class ApiController extends Controller
@@ -28,6 +27,6 @@ class ApiController extends Controller
                 ->value();
         }
 
-        return new JsonResponse(compact('data'), Response::HTTP_OK);
+        return $this->json(compact('data'), Response::HTTP_OK);
     }
 }

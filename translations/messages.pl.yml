@@ -1,2 +1,13 @@
+app:
+  description: 'Zadanie rekrutacyjne'
+  form:
+    convert: 'Konwertuj'
+    unit:
+      celsius: '°C'
+      fahrenheit: '°F'
+      kelvin: 'K'
+      placeholder: 'Jednostka'
+    value: 'Temperatura'
+  name: 'Konwerter temperatur'
 command:
   converter: 'Temperatura %value%%unit% w innych jednostkach ma wartość:'

@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'web.default.index.home'|trans }}{% endblock %}
+
+{% block header %}{{ 'web.default.index.home'|trans }}{% endblock %}
+
+{% block content %}
+    <h1>Ooups! <small>Something somewhere went wrong!</small></h1><br>
+    {{ message }}
+{% endblock %}

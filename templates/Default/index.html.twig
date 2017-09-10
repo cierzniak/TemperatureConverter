@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'app.name'|trans }}{% endblock %}
+
+{% block content %}
+    <header class="bg-info text-white">
+        <div class="container text-center">
+            <h1>{{ 'app.name'|trans }}</h1>
+            <p class="lead">{{ 'app.description'|trans }}</p>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div id="alert"></div>
+                    <form action="javascript:void(0);" id="needs-validation" novalidate>
+                        <div class="form-row justify-content-center">
+                            <div class="form-group col-md-5 col-lg-4">
+                                <input id="value" type="number" step="0.0001" class="form-control"
+                                       placeholder="{{ 'app.form.value'|trans }}" required>
+                            </div>
+                            <div class="form-group col-md-5 col-lg-4">
+                                <select id="unit" class="custom-select mb-12 mr-sm-12 mb-sm-12" required>
+                                    <option value="" selected>{{ 'app.form.unit.placeholder'|trans }}</option>
+                                    <option value="C">{{ 'app.form.unit.celsius'|trans }}</option>
+                                    <option value="F">{{ 'app.form.unit.fahrenheit'|trans }}</option>
+                                    <option value="K">{{ 'app.form.unit.kelvin'|trans }}</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-2 col-lg-3">
+                                <button class="btn btn-primary btn-info btn-block">
+                                    {{ 'app.form.convert'|trans }}
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="results"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="js-trans"
+         data-unit="{{ 'app.form.unit.placeholder'|trans }}"
+         data-value="{{ 'app.form.value'|trans }}"></div>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('build/js/request.js') }}"></script>
+{% endblock %}
