@@ -5,7 +5,7 @@ Encore
     .setPublicPath("/build")
     .cleanupOutputBeforeBuild()
     .enableSourceMaps(!Encore.isProduction())
-    .enableVersioning(Encore.isProduction())
+    // .enableVersioning(Encore.isProduction())
     .autoProvidejQuery()
     .addEntry("js/app", "./assets/js/app.js")
     .addEntry("js/request", "./assets/js/request.js")
